@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+require_relative '../sentence'
+
+text = ARGV[0]
+if text
+  sentence = Sentence.new(text)
+  puts sentence.reverse
+else
+  puts %q{
+    No sentence provided!  Provide a sentence in quotation marks.
+
+    Example:
+
+    bin/sentence "Reverse this sentence please."
+  }
+end
+
